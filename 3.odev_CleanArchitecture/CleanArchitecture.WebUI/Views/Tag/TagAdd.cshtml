@@ -1,0 +1,16 @@
+﻿@model Tag
+
+@{
+    ViewData["Title"] = "TagAdd";
+}
+
+<h1>TagAdd</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Etiket Adı")
+    @Html.TextBoxFor(x => x.TagName)
+
+    <input type="submit" value="Kaydet" />
+
+}

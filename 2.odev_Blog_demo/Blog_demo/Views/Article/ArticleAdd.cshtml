@@ -1,0 +1,29 @@
+﻿@model Article
+
+@{
+    ViewData["Title"] = "ArticleAdd";
+}
+
+<h1>ArticleAdd</h1>
+
+@using (Html.BeginForm())
+{
+   
+
+    <ul>
+        <li>
+            @Html.Label("Yazı Başlığı") <br />
+            @Html.TextBoxFor(x => x.ArticleTitle) <br />
+            @Html.Label("Yazarı") <br />
+            @Html.TextBoxFor(x => x.WriterName) <br />
+            @Html.Label("Kategorisi") <br />
+            @Html.TextBoxFor(x => x.Categories) <br />
+            @*@Html.Label("Tarihi") <br />
+            @Html.(x => x.PublishTime) <br />*@
+
+        </li>
+
+    </ul>
+    <input type="submit" value="Kaydet" />
+
+}

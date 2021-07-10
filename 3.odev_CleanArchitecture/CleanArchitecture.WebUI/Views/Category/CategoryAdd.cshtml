@@ -1,0 +1,16 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "CategoryAdd";
+}
+
+<h1>CategoryAdd</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.Name)
+
+    <input type="submit" value="Kaydet" />
+
+}

@@ -1,0 +1,30 @@
+﻿@model ArticleViewModel
+
+<div>
+    
+    <div class="col-md-4">
+        <select asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName" ))" multiple>
+            <br />
+            <option>Lütfen Kategori Seçiniz...</option>
+
+        </select>
+
+        @Html.ActionLink("Kategori Giriniz", "CategoryAdd", "Category");
+    </div>
+
+    <div class="col-md-4">
+        @Html.ActionLink("Yazı Ekle", "ArticleAdd", "Article");
+    </div>
+
+
+    @*<select asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName" ))" multiple>
+            <option>Görüntülemek istediğiniz yazıyı seçiniz</option>
+
+        </select>*@
+
+</div>
+
+
+
+
+
